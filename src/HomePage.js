@@ -20,10 +20,7 @@ export const HomePage = () => {
       <div>
         <Link
           to={{
-            pathname: `/${user}`,
-            state: {
-              user
-            }
+            pathname: `/${user}`
           }}
         >
           <button> Search</button>
