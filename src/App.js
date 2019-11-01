@@ -1,22 +1,17 @@
 import React from "react";
-import Input from "./Input";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { HomePage } from "./HomePage";
+import UserPage from "./UserPage";
 
 function App() {
   return (
-    <div>
-      <div>
-        <h1>GitHub User Searcher</h1>
-        <img
-          className="git-image"
-          src="https://image.flaticon.com/icons/svg/25/25231.svg"
-          alt="github icon"
-        />
-      </div>
-      <div>
-        <Input />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/:user" component={UserPage} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

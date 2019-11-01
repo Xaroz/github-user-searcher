@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Input(props) {
-  const [user, setUser] = useState("");
-
   const handleInputChange = event => {
-    setUser(event.target.value);
+    props.setUser(event.target.value);
   };
   return (
     <>
@@ -12,7 +10,7 @@ export default function Input(props) {
         placeholder="Type username..."
         onChange={handleInputChange}
         name="user"
-        value={user}
+        value={props.user}
       />
     </>
   );

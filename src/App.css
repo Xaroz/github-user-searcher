@@ -1,28 +1,43 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background-color: #2B3137;
+body {
+  background-color: #2b3137;
   color: white;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;;
-
+  font-family: "Times New Roman", Times, serif;
 }
-input{
+input {
   margin-top: 100px;
   width: 60%;
   padding: 7px;
 
   border: 2px solid gray;
-  box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);;
+  box-shadow: 14px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
-.git-image{
+button {
+  margin-top: 18px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid gray;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  background-color: #37434e;
+}
+button:hover {
+  border: 1px solid black;
+}
+button:active {
+  background-color: #3d434a;
+  border: 1px solid black;
+}
+
+.git-image {
   width: 250px;
   height: auto;
   margin-top: 20px;
 }
-
-
