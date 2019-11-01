@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Input from "./Input";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <h1>GitHub User Searcher</h1>
+        <img
+          className="git-image"
+          src="https://image.flaticon.com/icons/svg/25/25231.svg"
+          alt="github icon"
+        />
+      </div>
+      <div>
+        <Input />
+      </div>
     </div>
   );
 }
