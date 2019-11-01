@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import HashLoader from "react-spinners/HashLoader";
 
 export default function UserPage(props) {
   const username = props.match.params.user;
@@ -22,21 +23,25 @@ export default function UserPage(props) {
   }, [username]);
 
   return (
-    <div>
+    <>
       {loading ? (
-        <div>
-          <h1>Loading...</h1>
-        </div>
-      ) : hasError ? (
-        <div>
-          <h1>User Not Found</h1>
-        </div>
+        <HashLoader
+          sizeUnit={"px"}
+          size={60}
+          color={"#9B9B9B"}
+          css="position: absolute; top: 50%; left: 50%"
+        />
       ) : (
-        <div>
-          <h1>
-            {data.name} ({username})
-          </h1>
-          {/* relevant information to add: 
+        <>
+          {" "}
+          {hasError ? (
+            <h1>User Not Found</h1>
+          ) : (
+            <div>
+              <h1>
+                {data.name} ({username})
+              </h1>
+              {/* relevant information to add: 
         name:
         username
         avatar_url
@@ -45,12 +50,14 @@ export default function UserPage(props) {
         following
         url
         public_repos */}
-          <img className="user-img" src={data.avatar_url} alt="user" />
-        </div>
+              <img className="user-img" src={data.avatar_url} alt="user" />
+            </div>
+          )}
+          <Link to="/">
+            <button>Go back</button>
+          </Link>
+        </>
       )}
-      <Link to="/">
-        <button>Go back</button>
-      </Link>
-    </div>
+    </>
   );
 }
