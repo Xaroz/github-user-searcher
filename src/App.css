@@ -41,3 +41,7 @@ button:active {
   height: auto;
   margin-top: 20px;
 }
+.user-img {
+  width: 300px;
+  height: auto;
+}
